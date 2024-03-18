@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+          content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+
+
+
+    <title>CodePen - Icon Hover Effect Using</title>
+
+    <link rel="canonical" href="https://codepen.io/Metty/pen/oNVxjxy">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #222;
+            --clr: #fff;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--bg);
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            gap: 50px;
+        }
+
+            ul li {
+                position: relative;
+                list-style: none;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+                ul li::before {
+                    content: '';
+                    position: absolute;
+                    inset: 30px;
+                    box-shadow: 0 0 0 10px var(--clr), 0 0 0 20px var(--bg), 0 0 0 22px var(--clr);
+                    transition: 0.5s;
+                }
+
+                ul li:hover::before {
+                    inset: 15px;
+                }
+
+                ul li::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: var(--bg);
+                    transform: rotate(45deg);
+                    transition: 0.5s;
+                }
+
+                ul li:hover::after {
+                    inset: 0px;
+                    transform: rotate(0deg);
+                }
+
+                ul li a {
+                    position: relative;
+                    text-decoration: none;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                    ul li a i {
+                        font-size: 2em;
+                        transition: 0.5s;
+                        color: var(--clr);
+                        opacity: 1;
+                    }
+
+                ul li:hover a i {
+                    color: var(--clr);
+                    transform: translateY(-40%);
+                }
+
+                ul li a span {
+                    position: absolute;
+                    font-family: sans-serif;
+                    color: var(--clr);
+                    opacity: 0;
+                    transition: 0.5s;
+                    transform: scale(0) translateY(200%);
+                }
+
+                ul li:hover a span {
+                    opacity: 1;
+                    transform: scale(1) translateY(100%);
+                }
+
+                ul li:hover a i,
+                ul li a span {
+                    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+                }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+    <title>React App</title>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
